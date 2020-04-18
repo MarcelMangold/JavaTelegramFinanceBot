@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="financeBot" nsURI="de.bot.telegram.finance.mysticalduck" nsPrefix="de.bot.telegram.finance.mysticalduck">
+  <eClassifiers xsi:type="ecore:EClass" name="User">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" upperBound="-1"
+        eType="#//Transaction" eOpposite="#//Transaction/user"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chats" upperBound="-1"
+        eType="#//Chat" eOpposite="#//Chat/users"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Categorie">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transactions" upperBound="-1"
+        eType="#//Transaction" eOpposite="#//Transaction/categorie"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transaction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categorie" eType="#//Categorie"
+        eOpposite="#//Categorie/transactions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="user" eType="#//User" eOpposite="#//User/transactions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Chat">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="users" upperBound="-1"
+        eType="#//User" eOpposite="#//User/chats"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Income" eSuperTypes="#//Transaction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Outcome" eSuperTypes="#//Transaction"/>
+</ecore:EPackage>

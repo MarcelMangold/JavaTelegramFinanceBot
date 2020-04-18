@@ -3,4 +3,11 @@
   <groupId>de.bot.telegram.finance.mysticalduck</groupId>
   <artifactId>financeTelegramBot</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+      <dependency>
+        <groupId>org.telegram</groupId>
+        <artifactId>telegrambots</artifactId>
+        <version>4.7</version>
+    </dependency>
+  </dependencies>
 </project>
