@@ -30,6 +30,10 @@ public class PropertyManager {
             }
         }
     }
+    
+    public String getRestApiUrl() {
+    	return getValue("restApiUrl");
+    }
 
     public String getBotUsername() {
     	return getValue("botUsername");
