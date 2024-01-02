@@ -11,6 +11,9 @@ public class User {
     public User(String name, long telegramUserId) {
     	this.name = name;
     	this.telegramUserId = telegramUserId;
+    	this.password = "default";
+    	this.email = "email";
+    	this.language = 0;
     }
     
     public User() {  }
