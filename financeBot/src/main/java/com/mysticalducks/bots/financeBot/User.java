@@ -3,14 +3,14 @@ package com.mysticalducks.bots.financeBot;
 public class User {
 
     private String name;
-    private long telegramUserId;
+    private long userId;
     private String password;
     private String email;
     private int language;
 
-    public User(String name, long telegramUserId) {
+    public User(String name, long userId) {
     	this.name = name;
-    	this.telegramUserId = telegramUserId;
+    	this.userId = userId;
     	this.password = "default";
     	this.email = "email";
     	this.language = 0;
@@ -25,16 +25,16 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+    
+    public long getUserId() {
+		return userId;
+	}
 
-    public long getTelegramUserId() {
-        return telegramUserId;
-    }
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
 
-    public void setTelegramUserId(int telegramUserId) {
-        this.telegramUserId = telegramUserId;
-    }
-
-    public String getPassword() {
+	public String getPassword() {
         return password;
     }
 
